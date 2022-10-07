@@ -1,6 +1,7 @@
 window.addEventListener("load", (event)=> {
     
-    
+    let Xplayer = true;
+    let Oplayer = false;
     let squares  = document.querySelectorAll("#board > div");
     
     squares.forEach((sq)=> {
@@ -8,4 +9,24 @@ window.addEventListener("load", (event)=> {
         sq.innerHTML = " ";
     
     });
-})
+    var Track =['', '','','','','','', '','']
+    squares.forEach((sq)=>{
+        sq.onclick= (event)=>{
+            if(Xplayer && sq.innerHTML==" "){
+                sq.classList.add("X");
+                sq.innerHTML = 'X';
+                Xplayer = false;
+                Oplayer = true;
+            }
+            else if(Oplayer && sq.innerHTML==" "){
+                sq.classList.add("O");
+                sq.innerHTML = 'O';
+                Xplayer = true;
+                Oplayer = false;
+            }
+
+        }
+    })
+});
+
+
