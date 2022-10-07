@@ -26,7 +26,20 @@ window.addEventListener("load", (event)=> {
             }
 
         }
+
+        sq.addEventListener('mouseover', function handleMouseOver() {
+            sq.classList.add('hover');
+          });
+          
+          // 👇️ Change text color back on mouseout
+          sq.addEventListener('mouseout', function handleMouseOut() {
+            sq.classList.remove('hover');
+          });
+
     })
+    
+    
+
 });
 
 
