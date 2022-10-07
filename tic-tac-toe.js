@@ -7,8 +7,8 @@ window.addEventListener("load", (event)=> {
     let Xplayer = true;
     let Oplayer = false;
     let active;
-    let squares  = document.querySelectorAll("#board > div")
-    ;
+    let squares  = document.querySelectorAll("#board > div");
+    let reset =  document.querySelector(".btn");
     
     squares.forEach((sq)=> {
         sq.classList.add("square");
@@ -83,7 +83,11 @@ window.addEventListener("load", (event)=> {
          
          });
 
+         reset.addEventListener('click', restart);
     
+         function restart(){
+             window.location.reload();
+         }
    
 
 });
